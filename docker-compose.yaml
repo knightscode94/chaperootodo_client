@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   chaperoo-client:
-    image: jordangrindrod/chaperoo-client
+    image: ./chaperoo-client
     build: .
     ports:
       - target: 80
@@ -9,10 +9,10 @@ services:
     depends_on:
       - chaperoo-service    
   chaperoo-service: 
-    image: jordangrindrod/chaperoo-service
+    image: ./chaperoo-service
     depends_on: 
       - chaperoo-db
   chaperoo-db:
-    image: jordangrindrod/chaperoo-db
+    image: ./chaperoo-db
     environment:
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
