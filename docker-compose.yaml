@@ -15,4 +15,4 @@ services:
   chaperoo-db:
     image: ./chaperoo-db
     environment:
-      - MYSQL_ROOT_PASSWORD=${noclueatall}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
